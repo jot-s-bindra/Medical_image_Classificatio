@@ -9,3 +9,6 @@ In recent years, the intersection of medical imaging and deep learning has witne
 
 1. Fork and cloning this repository on your local device.
 
+## Deployment
+used app.py,streamlit
+[Deployed App Link](https://super-disco-764p7pwvvv43r45p-8501.app.github.dev/)
