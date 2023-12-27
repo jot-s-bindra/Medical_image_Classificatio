@@ -4,12 +4,12 @@ from PIL import Image
 import numpy as np
 
 # Load the model
-model = tf.keras.models.load_model('resnet_model.h5')
+model = tf.keras.models.load_model('My_model.h5')
 
 # Function to make predictions
 def predict(image):
     img = Image.open(image).convert('RGB')  
-    img = img.resize((224, 224))  
+    img = img.resize((128, 128))  
     img_array = np.array(img)  
     img_array = img_array / 255.0  
     img_array = np.expand_dims(img_array, axis=0)  
@@ -124,9 +124,9 @@ elif tabs == "BackEnd Used Model Graphs":
     st.markdown('<h1 class="title">Model Stats</h1>', unsafe_allow_html=True)
     st.markdown('<p class="description">My Model Graphs</p>', unsafe_allow_html=True)
 
-    image_1 = Image.open("accuracy_plot (1).jpg")
-    image_2 = Image.open("loss_plot (1).jpg")
-    image_3 = Image.open("roc_curve.jpg")
+    image_1 = Image.open("ROC_Class_0.jpeg.jpg")
+    image_2 = Image.open("ROC_Class_1.jpeg.jpg")
+    image_3 = Image.open("ROC_Class_2.jpeg.jpg")
 
     st.image(image_1, caption="My Model Graph 1", use_column_width=True)
     st.image(image_2, caption="My Model Graph 2", use_column_width=True)
